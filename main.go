@@ -7,10 +7,7 @@ import (
 
 func main() {
 	http.HandleFunc("/status", status)
+	http.HandleFunc("/consentUpdate", handleConsentUpdate)
+	http.HandleFunc("/dataflowUpdate", handleDataflowUpdate)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
-
-func status(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(200)
-}
-
