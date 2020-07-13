@@ -6,6 +6,8 @@ import (
 )
 
 func main() {
+	InitLogs()
+
 	http.HandleFunc("/status", status)
 	http.HandleFunc("/consentUpdate", handleConsentUpdate)
 	http.HandleFunc("/dataflowUpdate", handleDataflowUpdate)

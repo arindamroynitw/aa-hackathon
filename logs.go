@@ -14,7 +14,7 @@ var (
 	DataflowLogger *log.Logger
 )
 
-func init() {
+func InitLogs() {
 	file, err := os.OpenFile("logs.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	consentFile, err := os.OpenFile("consents.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	dataflowFile, err := os.OpenFile("consents.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
