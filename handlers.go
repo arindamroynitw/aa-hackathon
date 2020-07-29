@@ -20,7 +20,7 @@ func handleDataflowUpdate(writer http.ResponseWriter, request *http.Request) {
 	}
 
 	d, _:= ioutil.ReadAll(request.Body)
-	DataflowLogger.Printf("%v", d)
+	DataflowLogger.Printf("%v", string(d))
 	//var dataflowUpdate models.DataFlowUpdate
 	//err := json.NewDecoder(request.Body).Decode(&dataflowUpdate)
 	//
@@ -43,7 +43,7 @@ func handleConsentUpdate(writer http.ResponseWriter, request *http.Request) {
 	}
 
 	c, _:= ioutil.ReadAll(request.Body)
-	ConsentLogger.Printf("%v", c)
+	ConsentLogger.Printf("%v", string(c))
 	//var consentUpdate models.ConsentUpdate
 	//err := json.NewDecoder(request.Body).Decode(&consentUpdate)
 	//
